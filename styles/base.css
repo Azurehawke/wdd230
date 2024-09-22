@@ -1,5 +1,22 @@
-* {
-	box-sizing:border-box;
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: steelblue;
+	padding: 5px;
+	width: 400px;
+	color: white;
+}
+
+nav {
+	display: block;
+	background-color: gray;
+	width: 400px;
+	font-family: Roboto, Helvetica, sans-serif;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	padding: 5px;
 }
 body {
 	display: flex;
@@ -8,10 +25,17 @@ body {
 	justify-content: center;
 	font-size: 16px;
 	font-family: Roboto, Helvetica, sans-serif;
+
 }
 
+h3 {
+	background-color: steelblue;
+	padding: 5px;
+	border-width: 2px;
+	border-style: solid;
+}
 ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: 4px;
+    margin: 5px;
 }
