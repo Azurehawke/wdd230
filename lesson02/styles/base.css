@@ -25,11 +25,11 @@ body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 main {
-    max-width: 767px;
+    max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    font-size: 0.8rem;
+    font-size: 16px;
 }
 
 main section {
@@ -39,12 +39,28 @@ main section {
     background-color: #eee;
 }
 
+img {
+    max-width: 100%;
+    align-items: center;
+
+}
+footer {
+	margin-top: 1rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 20px;
+	text-align: center;
+    background-color: steelblue;
+    padding: 1px;
+    width: auto;
+    color: white;
+}
+
 
 @media only screen and (min-width: 37.5em) {
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        font-size: 0.8rem;
+        font-size: 16px;
     }
 
 	main section:nth-child(2) {
