@@ -1,0 +1,7 @@
+@media (min-width: 700px) {
+
+    .cards img {
+        width: 100%;
+        height: auto;
+    }
+}
