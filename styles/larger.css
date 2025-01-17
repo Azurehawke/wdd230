@@ -1,7 +1,10 @@
+
 @media (min-width: 700px) {
 
-    .cards img {
+    .cards {
         width: 100%;
         height: auto;
+        grid-column: 1/2;
+        grid-row: 2;
     }
 }
