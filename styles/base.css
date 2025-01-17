@@ -5,13 +5,15 @@
 }
 main {
     grid-template-columns: 1fr 1fr;
+
 }
 body {
 	font-size: 16px;
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
+    
 }
 header {
 	display: flex;
@@ -23,14 +25,14 @@ header {
 }
 
 header img {
-    max-width: 80px;
+    max-width: 100px;
     border-radius: 8px;
 }
 
 nav {
     background-color: gray;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 800px;
 
 }
 
@@ -56,6 +58,7 @@ h3 {
 	padding: 5px;
 	border-width: 2px;
 	border-style: solid;
+    text-align: center;
 }
 .cards {
 	position: relative;
@@ -64,8 +67,13 @@ h3 {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
 	border-radius: 5px;
-    margin: 10px;
+    margin: 10px auto;
+    padding: 10px;
 }
+ul {
+    list-style-type: none;
+}
+
 @media (min-width: 640px) {
 	nav ul {
 		display: flex;
