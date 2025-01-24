@@ -1,39 +1,47 @@
-* {
+:root {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 main {
-    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin: 16px auto;
+    padding: 0 16px;
 
 }
+
 body {
-	font-size: 16px;
+	display: block;
+    font-size: 16px;
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
     padding: 0;
     
 }
+
 header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: steelblue;
-	padding: 20px;
+	padding: 10px;
 	color: white;
 }
 
 header img {
     max-width: 100px;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
+h1 {
+    padding: 1em;
+}
 nav {
     background-color: gray;
-    margin: 0 auto;
-    max-width: 800px;
-
+    text-align: center;
+    display: none;
 }
 
 nav ul {
@@ -50,39 +58,92 @@ nav a {
     flex-direction: column;
     gap: 10px;
 }
+
 nav a:hover {
     text-decoration: underline overline;
+    color: white;
+    background-color: black;
 }
+
+nav a:active {
+    color: gray;
+}
+
+nav.open {
+    display: block;
+}
+
+.active::before,
+.active::after {
+    content: " 👀 ";
+}
+
+#menu {
+    background-color: gray;
+    border: none;
+    padding: 18px;
+    width: 100%;
+}
+
+#menu:hover {
+    background-color: gray;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+#activities li {
+    padding: 6px 0;
+}
+
+#activities {
+    list-style-type: none;
+
+}
+
+#info li {
+    padding: 10px 0px;
+}
+
+#info {
+    text-align: center;
+    padding: 0px;
+}
+
+h2 {
+    padding: 5px;
+    text-align: center;
+}
+
 h3 {
 	background-color: steelblue;
 	padding: 5px;
-	border-width: 2px;
+	border-width: 0px;
 	border-style: solid;
     text-align: center;
 }
 .cards {
-	position: relative;
-    max-width: 800px;
-    background-color: gray;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	transition: 0.3s;
-	border-radius: 5px;
-    margin: 10px auto;
-    padding: 10px;
+    background-color: lightgray;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: 20px 0px;
 }
+
 ul {
     list-style-type: none;
 }
 
-@media (min-width: 640px) {
-	nav ul {
-		display: flex;
-	}
-	nav ul li {
-		flex: 1 1 100%;
-	}
-    .cards {
-        grid-column: 1/2;
-        grid-row: 2;
-    }
+iframe {
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    border: 0;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
 }
