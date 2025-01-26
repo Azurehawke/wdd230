@@ -1,6 +1,3 @@
-:root {
-
-}
 
 body {
     text-align: center;
@@ -12,24 +9,53 @@ body {
 }
 
 main {
+    margin: 30px;
 
+}
 
+table {
+    border: 0px;
 }
 
 .colors {
-
+    width: 100%;
+    margin: 30px auto;
 }
 
 .colors th {
-
+    background-color: lightgray;
+    height: 2em;
 }
 
 .colors td {
-
+    width: 20%;
+    height: 3em;
 }
 
-#text {
+#headerbg {
+    background-color: rgb(100, 37, 18);
+    color: white;
+}
 
+#headertxt {
+    color: black;
+}
+
+#bg1 {
+    background-color: rgb(248, 242, 226);
+}
+
+#accent1 {
+    background-color: darkgreen;
+    color: white;
+}
+
+#accent2{
+    background-color: rgb(174, 212, 174);
+}
+
+ul {
+    list-style-type: none;
 }
 
 img {
