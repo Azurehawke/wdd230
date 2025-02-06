@@ -21,6 +21,7 @@ main {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 1rem;
 	background-color: #4164af;
+	color: white;
 	display: flex;
 	flex-direction: column;
 }
@@ -56,6 +57,7 @@ li {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	color: white;
 }
 
 @media only screen and (min-width: 32.5em) {
