@@ -77,4 +77,12 @@
         width: 100%;
         height: auto;
     }
+
+    iframe {
+    display: block;
+    max-width: 800px;
+    border: 0;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
+    }
 }
