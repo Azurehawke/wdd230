@@ -62,4 +62,8 @@ main {
 
 @media (min-width: 960px) {
 
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
 }
