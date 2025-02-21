@@ -58,10 +58,16 @@
         </section>
         <section class="cards" id="weather">
             <h3>Information</h3>
-            <p>The local weather is: </p>
+            <ul id="info">
+                <li>Victorville, California</li>
+                <li>[Weather forecast]</li>
+                <li>Visitors: <span class="visits"></span></li>
+            </ul>
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62577.838474323384!2d-117.30128667273803!3d34.48151946981502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1728013529818!5m2!1sen!2sus"
-        width="900"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62577.838474323384!2d-117.30128667273803!3d34.48151946981502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1728013529818!5m2!1sen!2sus"
+            width="900"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>    
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Steve Larsen, CA</p>
@@ -69,5 +75,6 @@
     </footer>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/visits.js"></script>
 </body>
 </html>

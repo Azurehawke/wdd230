@@ -173,3 +173,12 @@ iframe {
     padding: 0 0 20px 0;
     margin: 0 auto;
 }
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: steelblue;
+	padding: 10px;
+	color: white;
+}

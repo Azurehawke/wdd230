@@ -56,9 +56,10 @@
         grid-column: 3 / 4;
     }
 
-    iframe {
-        padding: 0 0 32px 0;
-    }
+    .map {
+        grid-column: span 4; 
+        grid-row: 4; 
+      }
 
     footer {
         display: grid;
