@@ -10,9 +10,9 @@
         <meta property="og:url" content="https://azurehawke.github.io/wdd230" />
         <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg" /> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!--Normalize-->
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/medium.css">
-        <link rel="stylesheet" href="styles/larger.css">
+        <link rel="stylesheet" href="../chamber/styles/base.css">
+        <link rel="stylesheet" href="../chamber/styles/medium.css">
+        <link rel="stylesheet" href="../chamber/styles/larger.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="icon" href="images/favicon.ico">
         <script src="/chamber/scripts/dark.js" defer></script>
@@ -36,16 +36,25 @@
         </nav>
         <main class="grid-container">
             <aside class="sidebar">
-                <h2>Navigation</h2>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <section class="card">
+                    <h3>Demographics</h3> 
+                    <p>Filler text!</p>
+                </section>
+                <section class="card">
+                    <h3>History</h3> 
+                    <p>Filler text!</p>
+                </section>
+                <section class="card">
+                    <h3>Attractions</h3> 
+                    <p>Filler text!</p>
+                </section>
             </aside>
     <footer>
         <p>For information, please contact <a href="mailto:larsen.steven@outlook.com">Steve Larsen</a></p>
         <p>(c) 2025 City of Victorville</p>
+        <p id="mod">Last modification: <span id="lastModified"></span></p>
     </footer>
+    <script src="../chamber/scripts/getdates.js"></script>
+    <script src="../chamber/scripts/mode.js"></script>
 </body>
 </html>
