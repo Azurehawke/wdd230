@@ -27,7 +27,8 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: white;
+    background-color: black;
 }
 
 main {
@@ -66,6 +67,9 @@ input[type="range"] {
 }
 
 #rating-value {
+    display: inline-block;
+    width: 2em; /* Fixed width to fit "10" */
+    text-align: left;
     margin-left: 1rem;
     font-weight: bold;
     color: var(--primary-color);
