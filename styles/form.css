@@ -1,5 +1,6 @@
 :root {
     --primary-color: steelblue; /* Dark blue for text and accents */
+    --accent-color1: gray; /* Gray for navigation bar */
     --background-color: #ecf0f1; /* Light gray background */
     --accent-color: #e74c3c; /* Red for errors and buttons */
 }
@@ -12,7 +13,7 @@ body {
     padding: 0;
 }
 
-header, nav, footer {
+header, footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--primary-color);
