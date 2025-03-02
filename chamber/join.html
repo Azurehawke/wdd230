@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Steve Larsen, WDD 230, assignment for week 04">
+        <meta name="author" content="Steve Larsen">
+        <meta property="og:title" content="Steve Larsen">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://azurehawke.github.io/wdd230" />
+        <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg" /> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!--Normalize-->
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/larger.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="icon" href="images/favicon.ico">
+        <script src="/chamber/scripts/dark.js" defer></script>
+        <title>Chamber of Commerce, City of Victorville, CA</title>
+    </head>
+<body>
+    <div class="mode">
+        <select name="theme" id="theme" class="theme">
+            <option value="light">light</option>
+            <option value="dark">dark</option>
+        </select>
+    <header>
+        <h1>Chamber of Commerce, City of Victorville, CA</h1>
+    </header>
+    <button id="menu" aria-label="Toggle navigation"></button>        
+    <nav class="navigation" aria-hidden="true">
+        <a href="/chamber/index.html">Home</a>
+        <a href="#">Discover</a>
+        <a href="#">Directory</a>
+        <a href="/chamber/join.html" target="_blank">Join</a>
+        </nav>
+    <main>
+        <form action="record.html" method="get" class="form-main">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label>Username* <input type="text" name="username" id="username" required></label>
+                <label>Password* <input type="password" name="password" id="password" required pattern="[A-Za-z0-9]{8,}"
+                        placeholder="8 alphanumeric characters"> </label>
+                <label>Confirm Password* <span id="message"></span> <input type="password" name="password" id="confirm"
+                        required pattern="[A-Za-z0-9]{8,}"> </label>
+                <label>Email* <input type="email" name="email" id="email" placeholder="example@byui.edu" required
+                        pattern=".+@byui\.edu" title="valid byui address"></label>
+            </fieldset>
+            <label for="r">Rating</label>
+            <div id="rangevalue">0</div>
+            <input type="range" id="r" name="r" min="0" max="10" value="0" step="1" list="rangevalues">
+            <datalist id="rangevalues">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </datalist>
+            <button id="rate-button" type="submit">Rate My Page!</button>
+        </form>
+
+    </main>
+</body>
