@@ -1,0 +1,98 @@
+{
+    "lessons": [
+      {
+        "lesson": "01",
+        "links": [
+          {
+            "url": "lesson01/holygrail.html",
+            "title": "Holy Grail Layout"
+          }
+        ]
+      },
+      {
+        "lesson": "02",
+        "links": [
+          {
+            "url": "lesson02/design.html",
+            "title": "Design Principles"
+          }
+        ]
+      },
+      {
+        "lesson": "03",
+        "links": [
+          {
+            "url": "lesson03/responsive.html",
+            "title": "Responsive Design"
+          }
+        ]
+      },
+      {
+        "lesson": "04",
+        "links": [
+          {
+            "url": "lesson04/grid.html",
+            "title": "CSS Grid"
+          }
+        ]
+      },
+      {
+        "lesson": "05",
+        "links": [
+          {
+            "url": "lesson05/bom.html",
+            "title": "Book of Mormon Top 25"
+          }
+        ]
+      },
+      {
+        "lesson": "06",
+        "links": [
+          {
+            "url": "lesson06/responsive-images.html",
+            "title": "Responsive Images"
+          }
+        ]
+      },
+      {
+        "lesson": "07",
+        "links": [
+          {
+            "url": "lesson07/lazyload.html",
+            "title": "Lazy Loading"
+          }
+        ]
+      },
+      {
+        "lesson": "08",
+        "links": [
+          {
+            "url": "lesson08/tablebuild.html",
+            "title": "Table Build"
+          }
+        ]
+      },
+      {
+        "lesson": "09",
+        "links": [
+          {
+            "url": "lesson09/prophets.html",
+            "title": "Latter-day Prophets"
+          },
+          {
+            "url": "lesson09/new-ward-members.json",
+            "title": "New Ward Members JSON"
+          }
+        ]
+      },
+      {
+        "lesson": "10",
+        "links": [
+          {
+            "url": "lesson10/weather.html",
+            "title": "Weather API"
+          }
+        ]
+      }
+    ]
+  }
