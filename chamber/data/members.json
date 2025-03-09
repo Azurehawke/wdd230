@@ -1,0 +1,65 @@
+[
+    {
+        "name": "GreenLeaf Nursery",
+        "address": "123 Plant St, Garden City, CA 90210",
+        "phone": "(555) 123-4567",
+        "website": "https://greenleafnursery.com",
+        "image": "greenleaf.png",
+        "membershipLevel": "Gold",
+        "description": "Specializing in sustainable gardening solutions."
+    },
+    {
+        "name": "TechTrend Innovations",
+        "address": "456 Tech Ave, Silicon Valley, CA 94043",
+        "phone": "(555) 987-6543",
+        "website": "https://techtrend.com",
+        "image": "techtrend.png",
+        "membershipLevel": "Platinum",
+        "description": "Leading the way in tech advancements."
+    },
+    {
+        "name": "Baker’s Delight",
+        "address": "789 Bread Ln, Foodtown, CA 92101",
+        "phone": "(555) 456-7890",
+        "website": "https://bakersdelight.com",
+        "image": "bakersdelight.png",
+        "membershipLevel": "Silver",
+        "description": "Freshly baked goods daily."
+    },
+    {
+        "name": "RiverRock Realty",
+        "address": "101 Stone Rd, Riverside, CA 92501",
+        "phone": "(555) 321-6547",
+        "website": "https://riverrockrealty.com",
+        "image": "riverrock.png",
+        "membershipLevel": "Bronze",
+        "description": "Your trusted real estate partner."
+    },
+    {
+        "name": "Sunny Fitness",
+        "address": "202 Fit Way, Sunnyvale, CA 94086",
+        "phone": "(555) 654-3210",
+        "website": "https://sunnyfitness.com",
+        "image": "sunnyfitness.png",
+        "membershipLevel": "Gold",
+        "description": "Fitness for everyone."
+    },
+    {
+        "name": "BlueWave Consulting",
+        "address": "303 Wave St, Ocean City, CA 92054",
+        "phone": "(555) 789-1234",
+        "website": "https://bluewaveconsulting.com",
+        "image": "bluewave.png",
+        "membershipLevel": "Platinum",
+        "description": "Expert business solutions."
+    },
+    {
+        "name": "Crafty Creations",
+        "address": "404 Art Ave, Craftsville, CA 92103",
+        "phone": "(555) 147-2589",
+        "website": "https://craftycreations.com",
+        "image": "craftycreations.png",
+        "membershipLevel": "Silver",
+        "description": "Handmade goods with love."
+    }
+]
