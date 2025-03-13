@@ -48,9 +48,12 @@
         <section class="cards" id="weather">
             <h3>Information</h3>
             <ul id="info">
-                <li>Victorville, California</li>
-                <li>[Weather forecast]</li>
-                <li>Visitors: <span class="visits"></span></li>
+                <p>Victorville, California</p>
+                <p>Current Weather</p>
+                    <div id="temperature">Loading...</div>
+                    <div id="description"></div>
+                    <img id="weather-icon" src="" alt="Weather icon">
+                <p>Visitors: <span class="visits"></span></p>
             </ul>
         </section>
         <div class="map">
@@ -66,5 +69,6 @@
     <script src="scripts/menu.js"></script>
     <script src="scripts/visits.js"></script>
     <script src="scripts/links.js"></script>
+    <script src="scripts/weather.js"></script>
 </body>
 </html>
