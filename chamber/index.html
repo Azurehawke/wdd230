@@ -19,11 +19,12 @@
         <title>Chamber of Commerce, City of Victorville, CA</title>
     </head>
 <body>
-    <div class="mode">
+    <class="mode">
         <select name="theme" id="theme" class="theme">
             <option value="light">light</option>
             <option value="dark">dark</option>
         </select>
+    </class>
     <header>
         <h1>Chamber of Commerce, City of Victorville, CA</h1>
     </header>
@@ -36,10 +37,20 @@
         </nav>
     <main>
         <img src="images/hero-victorville.webp">
+        <section class="cards" id="weather">
+            <h3>Information</h3>
+            <ul id="info">
+                <p>Current Weather</p>
+                    <div id="temperature">Loading...</div>
+                    <div id="description"></div>
+                    <img id="weather-icon" src="" alt="Weather icon">
+            </ul>
+        </section>
     </main>
     <footer>
         <p>For information, please contact <a href="mailto:larsen.steven@outlook.com">Steve Larsen</a></p>
         <p>(c) 2025 City of Victorville</p>
     </footer>
+    <script src="scripts/weather.js"></script>
 </body>
 </html>
