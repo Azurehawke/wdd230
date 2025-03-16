@@ -1,123 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta name="description" content="Steve Larsen, WDD 230, assignment for week 04">
-        <meta name="author" content="Steve Larsen">
-        <meta property="og:title" content="Steve Larsen">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://azurehawke.github.io/wdd230" />
-        <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg" /> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!--Normalize-->
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/medium.css">
-        <link rel="stylesheet" href="styles/larger.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="icon" href="images/favicon.ico">
-        <script src="scripts/dark.js" defer></script>
-        <title>Chamber of Commerce, City of Victorville, CA</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steve Larsen, WDD 230, assignment for week 04">
+    <meta name="author" content="Steve Larsen">
+    <meta property="og:title" content="Steve Larsen">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azurehawke.github.io/wdd230">
+    <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Chamber of Commerce, City of Victorville, CA</title>
+    <script src="scripts/dark.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
 <body>
     <div class="mode">
         <select name="theme" id="theme" class="theme">
-            <option value="light">light</option>
-            <option value="dark">dark</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
         </select>
+    </div>
     <header>
+        <div class="logo">
+            <img src="logo-placeholder.png" alt="Logo">
+        </div>
         <h1>Chamber of Commerce, City of Victorville, CA</h1>
     </header>
-    <button id="menu" aria-label="Toggle navigation"></button>        
+    <button id="menu" aria-label="Toggle navigation"></button>
     <nav class="navigation" aria-hidden="true">
         <a href="index.html">Home</a>
         <a href="#">Discover</a>
         <a href="directory.html">Directory</a>
         <a href="join.html">Join</a>
-        </nav>
-        <main class="grid-container">
-            <aside class="sidebar">
-                <section class="card">
-                    <h3>Demographics</h3> 
-                    <p>Sit magnam dolorem nobis architecto doloremque magni officia animi, quo provident obcaecati
-                        accusantium consequatur soluta rem vero, sunt dolor fuga. Eligendi voluptas quia eos, voluptatem
-                        debitis blanditiis magni doloribus vel?</p>
-                    <p>Quidem ipsam praesentium dolor voluptates mollitia quasi facere molestias minus, voluptatum
-                        dolorum
-                        distinctio laudantium sit eum, quibusdam fuga repellat corporis neque accusamus quam! Optio at
-                        dolore officiis, adipisci sit consequuntur!</p>
-                </section>
-                <section class="card">
-                    <h3>History</h3> 
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, eveniet suscipit. Accusamus vel
-                        dolorem doloremque beatae voluptates at praesentium! Tempora dolorem dolore repudiandae
-                        architecto,
-                        alias quibusdam illum adipisci praesentium magni.</p>
-                </section>
-                <section class="card">
-                    <h3>Attractions</h3> 
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatibus nulla,
-                        asperiores
-                        provident iste amet consequuntur doloremque, possimus cumque explicabo repellat! Voluptas quas
-                        quaerat vel tempore, itaque porro est praesentium?</p>
-                    <p>Sit magnam dolorem nobis architecto doloremque magni officia animi, quo provident obcaecati
-                        accusantium consequatur soluta rem vero, sunt dolor fuga. Eligendi voluptas quia eos, voluptatem
-                        debitis blanditiis magni doloribus vel?</p>
-                    <p>Quidem ipsam praesentium dolor voluptates mollitia quasi facere molestias minus, voluptatum
-                        dolorum
-                        distinctio laudantium sit eum, quibusdam fuga repellat corporis neque accusamus quam! Optio at
-                        dolore officiis, adipisci sit consequuntur!</p>
-                </section>
-            </aside>
+    </nav>
+    <main class="grid-container">
+        <aside class="sidebar">
+            <section class="cards">
+                <h3>Demographics</h3>
+                <p>Sit magnam dolorem nobis architecto doloremque magni officia animi, quo provident obcaecati accusantium consequatur soluta rem vero, sunt dolor fuga. Eligendi voluptas quia eos, voluptatem debitis blanditiis magni doloribus vel?</p>
+                <p>Quidem ipsam praesentium dolor voluptates mollitia quasi facere molestias minus, voluptatum dolorum distinctio laudantium sit eum, quibusdam fuga repellat corporis neque accusamus quam! Optio at dolore officiis, adipisci sit consequuntur!</p>
+            </section>
+            <section class="cards">
+                <h3>History</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, eveniet suscipit. Accusamus vel dolorem doloremque beatae voluptates at praesentium! Tempora dolorem dolore repudiandae architecto, alias quibusdam illum adipisci praesentium magni.</p>
+            </section>
+        </aside>
+        <section class="gallery-section">
+            <h3>Attractions</h3>
             <figure id="gallery">
                 <div class="gallery" id="mini-golf">
                     <picture>
-                        <source srcset="../chamber/images/mini-golf.webp" media="(min-width: 800px)">
                         <img src="../chamber/images/mini-golf.webp" alt="Mini golf at Scandia" loading="lazy">
                     </picture>
-                    <p>Enjoy mini-golf at Scandia amusement park</p>
+                    <figcaption>Enjoy mini-golf at Scandia amusement park</figcaption>
                 </div>
                 <div class="gallery" id="museum">
                     <picture>
-                        <source srcset="../chamber/images/museum.webp" media="(min-width: 800px)">
                         <img src="../chamber/images/museum.webp" alt="Victorville Museum" loading="lazy">
                     </picture>
-                    <p>Learn the history at the museum</p>
+                    <figcaption>Learn the history at the museum</figcaption>
                 </div>
-                <div class="gallery" id="mojave-narrows.webp">
+                <div class="gallery" id="mojave-narrows">
                     <picture>
-                        <source srcset="../chamber/images/mojave-narrows.webp" media="(min-width: 800px)">
                         <img src="../chamber/images/mojave-narrows.webp" alt="Mojave Narrows Regional Park" loading="lazy">
                     </picture>
-                    <p>There's lots of nature to enjoy at Mojave Narrows Regional Park</p>
+                    <figcaption>There's lots of nature to enjoy at Mojave Narrows Regional Park</figcaption>
                 </div>
                 <div class="gallery" id="restaurant">
                     <picture>
-                        <source srcset="../chamber/images/restaurant.webp" media="(min-width: 800px)">
                         <img src="../chamber/images/restaurant.webp" alt="Restaurant row" loading="lazy">
                     </picture>
-                    <p>There are many places to eat on Restaurant Row</p>
+                    <figcaption>There are many places to eat on Restaurant Row</figcaption>
                 </div>
                 <div class="gallery" id="svl">
                     <picture>
-                        <source srcset="../chamber/images/svl.webp" media="(min-width: 800px)">
                         <img src="../chamber/images/svl.webp" alt="Spring Valley Lake" loading="lazy">
                     </picture>
-                    <p>Swim, fish, or boat on the lake</p>
+                    <figcaption>Swim, fish, or boat on the lake</figcaption>
                 </div>
                 <div class="gallery" id="silverwood-sra">
                     <picture>
-                        <source srcset="../chamber/images/silverwood-sra.webp" media="(min-width: 800px)">
                         <img src="../chamber/images/silverwood-sra.webp" alt="Silverwood State Recreation Area" loading="lazy">
                     </picture>
-                    <p>Camping and more boating at Silverwood Lake SRA</p>
+                    <figcaption>Camping and more boating at Silverwood Lake SRA</figcaption>
                 </div>
-            </figure>    
+            </figure>
+        </section>
+    </main>
     <footer>
         <p>For information, please contact <a href="mailto:larsen.steven@outlook.com">Steve Larsen</a></p>
-        <p>(c) 2025 City of Victorville</p>
+        <p>© 2025 City of Victorville</p>
         <p id="mod">Last modification: <span id="lastModified"></span></p>
     </footer>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/mode.js"></script>
 </body>
 </html>

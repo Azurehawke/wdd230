@@ -1,21 +1,21 @@
-const theme_toggle = document.getElementById('theme');
-const body = document.body;
-
-function changeTheme(el) {
-// check to see what the current value of our select is.
-    let value = el.value;
-
-    if (value === 'dark') {
-        body.classList.add('dark');
-    }
-    else {
-        body.classList.remove('dark');
-    }
-
-};
-
-// add an event listener to the themeSelector element here.
-// Use the changeTheme function as the event handler function.
-theme_toggle.addEventListener('change', function(el){
-    changeTheme(el.currentTarget);
-});
+// dark.js
+document.addEventListener('DOMContentLoaded', () => {
+    const themeSelect = document.getElementById('theme');
+    
+    // Function to set the theme
+    const setTheme = (theme) => {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme); // Persist theme choice
+    };
+  
+    // Load saved theme from localStorage, default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    themeSelect.value = savedTheme; // Update select element to reflect saved theme
+  
+    // Listen for changes to the select element
+    themeSelect.addEventListener('change', (event) => {
+      const selectedTheme = event.target.value;
+      setTheme(selectedTheme);
+    });
+  });

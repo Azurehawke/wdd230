@@ -10,13 +10,11 @@ async function apiFetch() {
             const data = await response.json();
             console.log(data);
             displayResults(data);
+        } else {
+            const errorText = await response.text();
+            throw new Error(errorText);
         }
-        else {
-        const errorText = await response.text();
-        throw new Error(errorText);
-        }
-    } 
-    catch (error){
+    } catch (error) {
         console.error('Error:', error);
     }
 }
@@ -26,8 +24,13 @@ function displayResults(data) {
     const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     weatherIcon.setAttribute('src', iconSrc);
     let desc = data.weather[0].description;
-    captionDesc.textContent = `${desc}`;
-
+    // Convert description to capitalized words with spaces
+    const capitalizedDesc = desc
+        .toLowerCase()
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+    captionDesc.textContent = `${capitalizedDesc}`;
 }
 
 apiFetch();

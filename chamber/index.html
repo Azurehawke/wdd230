@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta name="description" content="Steve Larsen, WDD 230, assignment for week 04">
-        <meta name="author" content="Steve Larsen">
-        <meta property="og:title" content="Steve Larsen">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://azurehawke.github.io/wdd230" />
-        <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg" /> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!--Normalize-->
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/medium.css">
-        <link rel="stylesheet" href="styles/larger.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="icon" href="images/favicon.ico">
-        <script src="scripts/dark.js" defer></script>
-        <title>Chamber of Commerce, City of Victorville, CA</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steve Larsen, WDD 230, assignment for week 04">
+    <meta name="author" content="Steve Larsen">
+    <meta property="og:title" content="Steve Larsen">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azurehawke.github.io/wdd230">
+    <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Chamber of Commerce, City of Victorville, CA</title>
+    <script src="../chamber/scripts/weather.js" defer></script>
+</head>
 <body>
-    <class="mode">
+    <div class="mode">
         <select name="theme" id="theme" class="theme">
-            <option value="light">light</option>
-            <option value="dark">dark</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
         </select>
-    </class>
+    </div>
     <header>
+        <div class="logo">
+            <img src="logo-placeholder.png" alt="Logo">
+        </div>
         <h1>Chamber of Commerce, City of Victorville, CA</h1>
     </header>
-    <button id="menu" aria-label="Toggle navigation"></button>        
+    <button id="menu" aria-label="Toggle navigation"></button>
     <nav class="navigation" aria-hidden="true">
         <a href="#">Home</a>
         <a href="discover.html">Discover</a>
         <a href="directory.html">Directory</a>
         <a href="join.html">Join</a>
-        </nav>
+    </nav>
     <main>
-        <img src="images/hero-victorville.webp">
-        <section class="cards" id="weather">
-            <h3>Information</h3>
-            <ul id="info">
-                <p>Current Weather</p>
-                    <div id="temperature">Loading...</div>
-                    <div id="description"></div>
-                    <img id="weather-icon" src="" alt="Weather icon">
-            </ul>
-        </section>
+        <div class="hero">
+            <img src="../chamber/images/hero-victorville.webp" alt="Hero image">
+        </div>
+        <div class="content-grid">
+            <div class="main-content">
+                <section class="cards content-block">
+                    <h3>Route 66!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </p>
+                </section>
+                <section class="cards content-block">
+                    <h3>Main Content 2</h3>
+                    <p>Curabitur pretium tincidunt lacus. Nulla bibendum scelerisque eros, nec facilisis justo. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
+
+                    </p>
+                </section>
+            </div>
+            <aside class="sidebar">
+                <section class="cards" id="weather">
+                    <h3>Weather Information</h3>
+                    <ul id="info">
+                        <li>Current Weather in Victorville, CA:</li>
+                        <li><div id="temperature">Loading...</div></li>
+                        <li><div id="description"></div></li>
+                        <li><img id="weather-icon" src="" alt="Weather icon"></li>
+                    </ul>
+                </section>
+                <section class="cards image-gallery">
+                    <h3>Gallery Information</h3>
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <img src="placeholder-image-1.jpg" alt="Image 1">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="placeholder-image-2.jpg" alt="Image 2">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="placeholder-image-3.jpg" alt="Image 3">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="placeholder-image-4.jpg" alt="Image 4">
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
     </main>
     <footer>
         <p>For information, please contact <a href="mailto:larsen.steven@outlook.com">Steve Larsen</a></p>
-        <p>(c) 2025 City of Victorville</p>
+        <p>© 2025 City of Victorville</p>
     </footer>
-    <script src="scripts/weather.js"></script>
+    <script src="../chamber/scripts/dark.js"></script>
 </body>
 </html>
