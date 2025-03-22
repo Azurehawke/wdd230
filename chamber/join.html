@@ -1,52 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta name="description" content="Steve Larsen, WDD 230, assignment for week 04">
-        <meta name="author" content="Steve Larsen">
-        <meta property="og:title" content="Steve Larsen">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://azurehawke.github.io/wdd230" />
-        <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg" /> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!--Normalize-->
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="icon" href="images/favicon.ico">
-        <script src="scripts/dark.js" defer></script>
-        <title>Chamber of Commerce, City of Victorville, CA</title>
-    </head>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steve Larsen, WDD 230, assignment for week 11">
+    <meta name="author" content="Steve Larsen">
+    <meta property="og:title" content="Steve Larsen">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azurehawke.github.io/wdd230">
+    <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg">
+    <link rel="stylesheet" href="../chamber/styles/base.css?v=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" href="../chamber/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Join - Chamber of Commerce, City of Victorville, CA</title>
+    <script src="../chamber/scripts/dark.js" defer></script>
+</head>
 <body>
-    <div class="mode">
-        <select name="theme" id="theme" class="theme">
-            <option value="light">light</option>
-            <option value="dark">dark</option>
-        </select>
     <header>
         <div class="logo">
             <img src="../chamber/images/logo-placeholder.webp" alt="Logo">
         </div>
-        <h1>Chamber of Commerce, City of Victorville, CA</h1>
+        <h1>Join - Chamber of Commerce, City of Victorville, CA</h1>
+        <div class="mode">
+            <select name="theme" id="theme" class="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
     </header>
     <button id="menu" aria-label="Toggle navigation"></button>        
     <nav class="navigation" aria-hidden="true">
         <a href="index.html">Home</a>
         <a href="discover.html">Discover</a>
         <a href="directory.html">Directory</a>
-        <a href="#">Join</a>
+        <a href="#" class="active">Join</a>
         </nav>
     <main>
-        <form action="record.html" method="get" class="form-main">
+        <h2>Join the Chamber</h2>
+        <form action="thankyou.html" method="get" id="join-form" class="form-main">
             <fieldset>
                 <legend>Applicant Information</legend>
-                <label>Username* <input type="text" name="username" id="username" required></label>
-                <label>Password* <input type="password" name="password" id="password" required pattern="[A-Za-z0-9]{8,}"
-                        placeholder="8 alphanumeric characters"> </label>
-                <label>Confirm Password* <span id="message"></span> <input type="password" name="password" id="confirm"
-                        required pattern="[A-Za-z0-9]{8,}"> </label>
-                <label>Email* <input type="email" name="email" id="email" placeholder="example@byui.edu" required
-                        pattern=".+@byui\.edu" title="valid byui address"></label>
+                <label>First Name* <input type="text" name="first-name" id="first-name" required></label>
+                <label>Last Name* <input type="text" name="last-name" id="last-name" required></label>
+                <label>Email* <input type="email" name="email" id="email" placeholder="example@domain.com" required></label>
+                <label>Cell Phone* <input type="tel" name="phone" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"></label>
+                <label>Business Title* <input type="text" name="business-title" id="business-title" required pattern="[A-Za-z\s-]{7,}" title="Business title must be at least 7 characters long and contain only letters, spaces, or hyphens."></label>
+                <input type="hidden" id="submission-date" name="submission-date">
             </fieldset>
+            <aside class="membership-benefits">
+                <h2>Membership Benefits</h2>
+                <p><strong>Bronze:</strong> Basic listing in directory.</p>
+                <p><strong>Silver:</strong> Enhanced listing and event discounts.</p>
+                <p><strong>Gold:</strong> Premium listing, event discounts, and spotlight feature.</p>
+                <p><strong>Platinum:</strong> All benefits plus exclusive networking events.</p>
+            </aside>
+            <button type="submit">Join Now</button>
+        </form>
             <label for="r">Rating</label>
             <div id="rangevalue">0</div>
             <input type="range" id="r" name="r" min="0" max="10" value="0" step="1" list="rangevalues">
@@ -67,4 +77,10 @@
         </form>
 
     </main>
+    <footer>
+        <p>For information, please contact <a href="mailto:larsen.steven@outlook.com">Steve Larsen</a> | © <span id="year"></span> City of Victorville | Steve Larsen | WDD 230 | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="../chamber/scripts/menu.js" defer></script>
+    <script src="../chamber/scripts/getdates.js" defer></script>
+    <script src="../chamber/scripts/join.js" defer></script>
 </body>

@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Steve Larsen, WDD 230, assignment for week 04">
+    <meta name="description" content="Steve Larsen, WDD 230, assignment for week 11">
     <meta name="author" content="Steve Larsen">
     <meta property="og:title" content="Steve Larsen">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://azurehawke.github.io/wdd230">
     <meta property="og:image" content="https://lh4.googleusercontent.com/proxy/OSEliYbeGSDAPbCuC_08zjiZvCTHBfrU7ymI8AK6qhl9umP_SDGq84mXp5ERGubdfIPRO7fAExkAXbceUQg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="../chamber/styles/base.css">
+    <link rel="stylesheet" href="../chamber/styles/base.css?v=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="icon" href="/chamber/images/favicon.ico">
-    <title>Chamber of Commerce, City of Victorville, CA</title>
+    <link rel="icon" href="../chamber/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Discover Victorville - Chamber of Commerce, City of Victorville, CA</title>
     <script src="../chamber/scripts/dark.js" defer></script>
-    <script src="../chamber/scripts/getdates.js" defer></script>
 </head>
 <body>
-    <div class="mode">
-        <select name="theme" id="theme" class="theme">
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-        </select>
-    </div>
     <header>
         <div class="logo">
             <img src="../chamber/images/logo-placeholder.webp" alt="Logo">
         </div>
-        <h1>Chamber of Commerce, City of Victorville, CA</h1>
+        <h1>Discover the City of Victorville, CA</h1>
+        <div class="mode">
+            <select name="theme" id="theme" class="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
     </header>
-    <button id="menu" aria-label="Toggle navigation"></button>
+    <button id="menu" aria-label="Toggle navigation" aria-expanded="false"></button>
     <nav class="navigation" aria-hidden="true">
         <a href="index.html">Home</a>
-        <a href="#">Discover</a>
+        <a href="#" class="active">Discover</a>
         <a href="directory.html">Directory</a>
         <a href="join.html">Join</a>
     </nav>
@@ -48,53 +47,64 @@
                 <h3>History</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, eveniet suscipit. Accusamus vel dolorem doloremque beatae voluptates at praesentium! Tempora dolorem dolore repudiandae architecto, alias quibusdam illum adipisci praesentium magni.</p>
             </section>
+            <section class="cards">
+                <h3>Days Since Last Visit</h3>
+                <p id="last-visit"></p>
+            </section>
         </aside>
         <section class="gallery-section">
-            <h3>Attractions</h3>
-            <figure id="gallery">
-                <div class="gallery" id="mini-golf">
+            <h2>Attractions</h2>
+            <div id="gallery">
+                <figure class="gallery" id="mini-golf">
                     <picture>
-                        <img src="../chamber/images/mini-golf.webp" alt="Mini golf at Scandia" loading="lazy">
+                        <source media="(max-width: 600px)" srcset="../chamber/images/mini-golf-small.webp" width="150" height="100">
+                        <img src="../chamber/images/mini-golf.webp" alt="Mini golf at Scandia" loading="lazy" width="300" height="200">
                     </picture>
                     <figcaption>Enjoy mini-golf at Scandia amusement park</figcaption>
-                </div>
-                <div class="gallery" id="museum">
+                </figure>
+                <figure class="gallery" id="museum">
                     <picture>
-                        <img src="../chamber/images/museum.webp" alt="Victorville Museum" loading="lazy">
+                        <source media="(max-width: 600px)" srcset="../chamber/images/museum-small.webp" width="150" height="100">
+                        <img src="../chamber/images/museum.webp" alt="Victorville Museum" loading="lazy" width="300" height="200">
                     </picture>
                     <figcaption>Learn the history at the museum</figcaption>
-                </div>
-                <div class="gallery" id="mojave-narrows">
+                </figure>
+                <figure class="gallery" id="mojave-narrows">
                     <picture>
-                        <img src="../chamber/images/mojave-narrows.webp" alt="Mojave Narrows Regional Park" loading="lazy">
+                        <source media="(max-width: 600px)" srcset="../chamber/images/mojave-narrows-small.webp" width="150" height="100">
+                        <img src="../chamber/images/mojave-narrows.webp" alt="Mojave Narrows Regional Park" loading="lazy" width="300" height="200">
                     </picture>
                     <figcaption>There's lots of nature to enjoy at Mojave Narrows Regional Park</figcaption>
-                </div>
-                <div class="gallery" id="restaurant">
+                </figure>
+                <figure class="gallery" id="restaurant">
                     <picture>
-                        <img src="../chamber/images/restaurant.webp" alt="Restaurant row" loading="lazy">
+                        <source media="(max-width: 600px)" srcset="../chamber/images/restaurant-small.webp" width="150" height="100">
+                        <img src="../chamber/images/restaurant.webp" alt="Restaurant row" loading="lazy" width="300" height="200">
                     </picture>
                     <figcaption>There are many places to eat on Restaurant Row</figcaption>
-                </div>
-                <div class="gallery" id="svl">
+                </figure>
+                <figure class="gallery" id="svl">
                     <picture>
-                        <img src="../chamber/images/svl.webp" alt="Spring Valley Lake" loading="lazy">
+                        <source media="(max-width: 600px)" srcset="../chamber/images/svl-small.webp" width="150" height="100">
+                        <img src="../chamber/images/svl.webp" alt="Spring Valley Lake" loading="lazy" width="300" height="200">
                     </picture>
                     <figcaption>Swim, fish, or boat on the lake</figcaption>
-                </div>
-                <div class="gallery" id="silverwood-sra">
+                </figure>
+                <figure class="gallery" id="silverwood-sra">
                     <picture>
-                        <img src="../chamber/images/silverwood-sra.webp" alt="Silverwood State Recreation Area" loading="lazy">
+                        <source media="(max-width: 600px)" srcset="../chamber/images/silverwood-sra-small.webp" width="150" height="100">
+                        <img src="../chamber/images/silverwood-sra.webp" alt="Silverwood State Recreation Area" loading="lazy" width="300" height="200">
                     </picture>
                     <figcaption>Camping and more boating at Silverwood Lake SRA</figcaption>
-                </div>
-            </figure>
+                </figure>
+            </div>
         </section>
     </main>
     <footer>
-        <p>For information, please contact <a href="mailto:larsen.steven@outlook.com">Steve Larsen</a></p>
-        <p>© 2025 City of Victorville</p>
-        <p id="mod">Last modification: <span id="lastModified"></span></p>
+        <p>For information, please contact <a href="mailto:larsen.steven@outlook.com">Steve Larsen</a> | © <span id="year"></span> City of Victorville | Steve Larsen | WDD 230 | Last Modified: <span id="lastModified"></span></p>
     </footer>
+    <script src="../chamber/scripts/menu.js" defer></script>
+    <script src="../chamber/scripts/discover.js" defer></script>
+    <script src="../chamber/scripts/getdates.js" defer></script>
 </body>
 </html>
