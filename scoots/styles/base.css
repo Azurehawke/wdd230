@@ -1,7 +1,8 @@
 :root {
-  --background-color: #4f9ae6;
-  --footer-color: #7b485d;
+  --background-color: #3d78bc;
+  --footer-color: #1b96b9;
 }
+
 /* Ensure no white background shows through */
 html,
 body {
@@ -9,6 +10,14 @@ body {
   padding: 0; /* Reset default padding */
   background: var(--background-color); /* Match header color as a fallback */
   height: 100%; /* Ensure full height */
+}
+
+h1 {
+  font-size: 2.5em; /* Larger font size for headings */
+  color: white; /* White text for contrast */
+  margin: 0; /* Remove default margin */
+  padding: 20px; /* Add padding for spacing */
+  text-align: center; /* Center the heading */
 }
 
 /* Header styles */
@@ -82,10 +91,25 @@ body {
   z-index: 10; /* Above hero */
   margin-top: 120px; /* Space for the fixed header */
   padding: 20px;
-  padding-bottom: 80px; /* Space for the fixed footer (footer height + padding) */
-  min-height: auto; /* For scrolling demo */
+  padding-bottom: 80px; /* Space for the fixed footer */
+  display: flex; /* Use flexbox to place containers side by side */
+  gap: 20px; /* Space between the main text and weather forecast */
+  background: none; /* Remove background from .content */
+}
+
+/* Main text container */
+.main-text {
+  flex: 1; /* Take up remaining space */
   background: rgba(192, 204, 216, 0.603); /* Semi-transparent background */
-  width: 40%;
+  padding: 20px;
+}
+
+/* Weather forecast container */
+.weather-forecast {
+  width: 30%; /* Fixed width for the weather forecast */
+  background: rgba(192, 204, 216, 0.603); /* Semi-transparent background */
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
 }
 
 /* Footer styles */
@@ -94,12 +118,38 @@ body {
   bottom: 0; /* Pin to the bottom of the viewport */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Adjust for centering */
-  width: 100%; /* Match body margins: 40px on each side */
+  width: 100%; /* Full width */
   z-index: 1000; /* Above hero and content */
   padding: 20px;
   background: var(--footer-color); /* Dark background to match header */
-  text-align: center;
-  color: white; /* Fix typo: was "columns: white" */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between copyright and social media */
+  align-items: center; /* Vertically center items */
+  color: white;
+}
+
+/* Copyright notice */
+.footer-copyright {
+  flex: 1; /* Take up remaining space to center */
+  text-align: center; /* Center the copyright text */
+}
+
+/* Social media icons container */
+.social-media {
+  display: flex;
+  gap: 15px; /* Space between icons */
+  margin-right: 40px;
+}
+
+/* Social media icon links */
+.social-media a {
+  color: white; /* White icons */
+  font-size: 24px; /* Icon size */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-media a:hover {
+  color: #ffd700; /* Gold color on hover, matching nav links */
 }
 
 /* Mobile menu toggle (hidden by default) */
@@ -147,7 +197,7 @@ body {
   }
 
   .footer {
-    width: 100%; /* Adjust for smaller margins */
+    width: 100%; /* Full width */
   }
 
   .hero {
@@ -158,6 +208,17 @@ body {
   body {
     margin: 0 20px;
   }
+
+  /* Stack containers vertically on smaller screens */
+  .content {
+    flex-direction: column; /* Stack vertically */
+    gap: 20px; /* Space between stacked containers */
+  }
+
+  .main-text,
+  .weather-forecast {
+    width: 100%; /* Full width on smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
@@ -167,6 +228,10 @@ body {
 
   .footer {
     width: calc(100% - 20px); /* Adjust for smaller margins */
+  }
+
+  .social-media a {
+    font-size: 20px; /* Smaller icons on mobile */
   }
 
   .hero {
