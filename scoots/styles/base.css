@@ -1,0 +1,180 @@
+:root {
+  --background-color: #4f9ae6;
+  --footer-color: #7b485d;
+}
+/* Ensure no white background shows through */
+html,
+body {
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default padding */
+  background: var(--background-color); /* Match header color as a fallback */
+  height: 100%; /* Ensure full height */
+}
+
+/* Header styles */
+.header {
+  position: fixed; /* Fixed positioning, stays at the top */
+  top: 0;
+  width: calc(100% - 80px); /* Match body margins: 40px on each side */
+  background: var(--background-color); /* Dark background for contrast */
+  z-index: 1000; /* Ensure it’s above hero and content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  height: 120px; /* Fixed height */
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo no longer needs transition since no collapsing */
+.logo {
+  height: 80px;
+}
+
+/* Navigation styles */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffd700;
+}
+
+/* Hero image styles */
+.hero {
+  position: fixed;
+  top: 120px; /* Start below the fixed header’s height */
+  left: 0;
+  width: 100%; /* Full width */
+  height: calc(100vh - 120px); /* Full viewport height minus header */
+  z-index: 1; /* Below content and footer */
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content spacer */
+.content {
+  position: relative;
+  z-index: 10; /* Above hero */
+  margin-top: 120px; /* Space for the fixed header */
+  padding: 20px;
+  padding-bottom: 80px; /* Space for the fixed footer (footer height + padding) */
+  min-height: auto; /* For scrolling demo */
+  background: rgba(192, 204, 216, 0.603); /* Semi-transparent background */
+  width: 40%;
+}
+
+/* Footer styles */
+.footer {
+  position: fixed; /* Fixed positioning, stays at the bottom */
+  bottom: 0; /* Pin to the bottom of the viewport */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 100%; /* Match body margins: 40px on each side */
+  z-index: 1000; /* Above hero and content */
+  padding: 20px;
+  background: var(--footer-color); /* Dark background to match header */
+  text-align: center;
+  color: white; /* Fix typo: was "columns: white" */
+}
+
+/* Mobile menu toggle (hidden by default) */
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Apply margins to body for non-fixed elements */
+body {
+  margin: 0 40px; /* Keep margins for content */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .header {
+    width: calc(100% - 40px); /* Adjust for smaller margins */
+  }
+
+  .footer {
+    width: 100%; /* Adjust for smaller margins */
+  }
+
+  .hero {
+    top: 120px; /* Keep consistent with header height */
+    height: calc(100vh - 120px);
+  }
+
+  body {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    width: calc(100% - 20px); /* Adjust for smaller margins */
+  }
+
+  .footer {
+    width: calc(100% - 20px); /* Adjust for smaller margins */
+  }
+
+  .hero {
+    top: 120px;
+    height: calc(100vh - 120px);
+  }
+
+  body {
+    margin: 0 10px;
+  }
+}
