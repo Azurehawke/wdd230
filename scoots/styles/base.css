@@ -143,6 +143,7 @@ h1 {
   display: flex;
   gap: 15px; /* Space between icons */
   margin-right: 40px;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5)); /* Shadow effect */
 }
 
 /* Social media icon links */
