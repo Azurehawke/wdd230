@@ -40,7 +40,6 @@ h1 {
   align-items: center;
 }
 
-/* Logo no longer needs transition since no collapsing */
 .logo {
   height: 80px;
 }
@@ -103,6 +102,7 @@ h1 {
   flex: 1; /* Take up remaining space */
   background: rgba(192, 204, 216, 0.603); /* Semi-transparent background */
   padding: 20px;
+  border-radius: 4px; /* Rounded corners */
 }
 
 /* Weather forecast container */
