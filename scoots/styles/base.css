@@ -111,6 +111,7 @@ h1 {
   background: rgba(192, 204, 216, 0.603); /* Semi-transparent background */
   padding: 20px;
   box-sizing: border-box; /* Ensure padding doesn’t affect width */
+  border-radius: 4px;
 }
 
 /* Footer styles */
