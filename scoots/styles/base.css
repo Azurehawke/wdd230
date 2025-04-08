@@ -95,6 +95,7 @@ h1 {
   gap: 20px; /* Space between the main text and weather forecast */
   background: none; /* Remove background from .content */
   border-radius: 4px;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5)); /* Shadow effect */
 }
 
 /* Main text container */
