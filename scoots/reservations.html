@@ -34,6 +34,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.webp">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link type="text/css" rel="stylesheet" href="../scoots/styles/base.css">
+        <link rel="stylesheet" href="../scoots/styles/form.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -54,12 +55,75 @@
         <div class="hero">
             <img src="../scoots/images/heroes/hero-image-reservation.webp" alt="Scooter Hero Image" class="hero-image">
         </div>
-        <div class="content">
-            <div class="main-text">
-                <p>Welcome to Scoots, your premier motor scooter rental company on the sun-drenched island of Cozumel! Nestled in the western Caribbean Sea off Mexico’s coast, we’re here to fuel your island adventure with our fleet of motor scooters, jeeps, and side-by-side ATVs. Whether you’re a local, a spontaneous walk-in tourist, a scooter enthusiast, or part of a cruise group, we’ve got you covered with two convenient locations: one near the Playa del Carmen-Cozumel Ferry dock in el Centro de Cozumel, and another by the Terminal Puerta Maya, perfect for cruise patrons. </p>
-                <p>At Scoots, we make renting easy, friendly, and fun—leaving you free to soak in the carefree island vibe. Explore beyond the bustling western tourist spots and discover the hidden gems of Cozumel’s southern and eastern shores, where vast coasts and serene inlets await. Ready to ride?</p>
-                <p>Learn about our services, requirements, and simple rental process—plan your escape today!</p>
-            </div>
+        <div class="form-container">
+            <h2>Rental Agreement Form</h2>
+            <form action="/submit" method="POST">
+              <!-- Rental Details Section -->
+              <fieldset class="rental-details">
+                <legend>Rental Details</legend>
+                <div class="form-grid">
+                  <label for="rental-date">Rental Date:</label>
+                  <input type="date" id="rental-date" name="rental-date" required>
+        
+                  <label for="rental-period">Rental Period (days):</label>
+                  <input type="number" id="rental-period" name="rental-period" min="1" required>
+        
+                  <label for="rental-type">Rental Type:</label>
+                  <select id="rental-type" name="rental-type" required>
+                    <option value="">Select Type</option>
+                    <option value="scooter">Scooter</option>
+                    <option value="atv">ATV</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="other">Other</option>
+                  </select>
+        
+                  <label for="rental-number">Rental Number:</label>
+                  <input type="text" id="rental-number" name="rental-number" required>
+                </div>
+              </fieldset>
+        
+              <!-- Personal Information Section -->
+              <fieldset class="personal-info">
+                <legend>Personal Information</legend>
+                <div class="form-grid">
+                  <label for="name">Full Name:</label>
+                  <input type="text" id="name" name="name" required>
+        
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+        
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+        
+                  <label for="home-state">Home State/Country:</label>
+                  <input type="text" id="home-state" name="home-state" required>
+                </div>
+              </fieldset>
+        
+              <!-- Cruise Line (Conditional) -->
+              <fieldset class="cruise-line" id="cruise-line-section">
+                <legend>Cruise Line (if applicable)</legend>
+                <div class="form-grid">
+                  <label for="cruise-line">Cruise Line:</label>
+                  <input type="text" id="cruise-line" name="cruise-line">
+                </div>
+              </fieldset>
+        
+              <!-- Special Accommodations -->
+              <fieldset class="special-accommodations">
+                <legend>Special Accommodations/Comments</legend>
+                <div class="form-flex">
+                  <label for="special-comments">Needs or Drop-off Request:</label>
+                  <textarea id="special-comments" name="special-comments" rows="4" placeholder="E.g., Need drop-off at airport"></textarea>
+                </div>
+              </fieldset>
+        
+              <!-- Submit Button -->
+              <div class="submit-container">
+                <button type="submit">Submit Agreement</button>
+              </div>
+            </form>
+          </div>
     </main>
     <footer class="footer">
         <div class="footer-copyright">
@@ -77,5 +141,6 @@
             </a>
         </div>
     </footer>
+    <script src="../scoots/scripts/reservation.js"></script>
 </body>
 <html

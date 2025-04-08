@@ -1,29 +1,38 @@
 table {
+  flex: 1;
   border-collapse: collapse;
   width: 100%;
   margin: 20px 0;
   font-family: Arial, sans-serif;
-  width: 40%;
-  background: rgba(192, 204, 216, 0.603); /* Semi-transparent background */
+  width: 60%;
+  background: rgba(192, 204, 216, 0.75); /* Semi-transparent background */
 }
 
 th,
 td {
   border: 1px solid #ddd;
   padding: 12px;
-  text-align: left;
+  text-align: center;
   text-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.25); /* Shadow effect */
+  width: auto;
 }
 
 th {
   background-color: #f2f2f2;
   font-weight: bold;
+  text-align: center;
 }
 
 tr:nth-child(even) {
   background-color: #f9f9f9;
+  text-align: center;
 }
 
 .price {
   text-align: right;
+}
+
+.tableCaption {
+  font-size: 4em;
+  color: white;
 }
