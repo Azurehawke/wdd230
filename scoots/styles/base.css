@@ -95,6 +95,7 @@ h1 {
   display: flex; /* Use flexbox to place containers side by side */
   gap: 20px; /* Space between the main text and weather forecast */
   background: none; /* Remove background from .content */
+  border-radius: 4px;
 }
 
 /* Main text container */
