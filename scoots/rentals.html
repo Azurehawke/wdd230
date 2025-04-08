@@ -32,11 +32,11 @@
         <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.webp">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.webp">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.webp">
-        <link type="text/css" rel="stylesheet" href="./styles/normalize.css">
-        <link type="text/css" rel="stylesheet" href="./styles/base.css">
-        <link type="text/css" rel="stylesheet" href="./styles/larger.css">
-	<link type="text/css" rel="stylesheet" href="../scoots/styles/header-nav.css">
-</head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link type="text/css" rel="stylesheet" href="../scoots/styles/base.css">
+        <link rel="stylesheet" href="../scoots/styles/table.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 <body>
     <header class="header">
         <div class="logo-container">
@@ -55,17 +55,43 @@
         <div class="hero">
             <img src="../scoots/images/heroes/hero-image-rental.webp" alt="Scooter Hero Image" class="hero-image">
         </div>
+        <h1>Rental Types and Prices</h1>
         <div class="content">
             <div class="main-text">
-                <p>Welcome to Scoots, your premier motor scooter rental company on the sun-drenched island of Cozumel! Nestled in the western Caribbean Sea off Mexico’s coast, we’re here to fuel your island adventure with our fleet of motor scooters, jeeps, and side-by-side ATVs. Whether you’re a local, a spontaneous walk-in tourist, a scooter enthusiast, or part of a cruise group, we’ve got you covered with two convenient locations: one near the Playa del Carmen-Cozumel Ferry dock in el Centro de Cozumel, and another by the Terminal Puerta Maya, perfect for cruise patrons. </p>
-                <p>At Scoots, we make renting easy, friendly, and fun—leaving you free to soak in the carefree island vibe. Explore beyond the bustling western tourist spots and discover the hidden gems of Cozumel’s southern and eastern shores, where vast coasts and serene inlets await. Ready to ride?</p>
-                <p>Learn about our services, requirements, and simple rental process—plan your escape today!</p>
-            </div>
-    </main>
-	<footer>
-        <div class="footer">
-        <p>Copyright 2025 Larsen Designs</p>
+                <p>this is going to be descriptive text and whatnot.</p>
         </div>
-	</footer>
+        <div class="content">
+            <table id="rentalTable">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Type</th>
+                        <th>Persons</th>
+                        <th>Reservation Half Day ($)</th>
+                        <th>Reservation Full Day ($)</th>
+                        <th>Walk-in Half Day ($)</th>
+                        <th>Walk-in Full Day ($)</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+    </main>
+    <footer class="footer">
+        <div class="footer-copyright">
+            <p>© 2025 Larsen Designs. All rights reserved.</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.x.com/yourpage" target="_blank" aria-label="X">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="../scoots/scripts/rentals.js"></script>
 </body>
 <html

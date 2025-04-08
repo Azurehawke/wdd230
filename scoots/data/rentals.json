@@ -1,7 +1,7 @@
 {
     "rentals": [
         {
-            "class": "scooter",
+            "class": "SCOOTER",
             "type": "Honda Metro Scooter",
             "persons": 1,
             "reservation_half_day": 20,
@@ -10,7 +10,7 @@
             "walk_in_full_day": 35
         },
         {
-            "class": "scooter",
+            "class": "SCOOTER",
             "type": "Honda Dio Scooter",
             "persons": 2,
             "reservation_half_day": 30,
@@ -19,7 +19,7 @@
             "walk_in_full_day": 45
         },
         {
-            "class": "scooter",
+            "class": "SCOOTER",
             "type": "Honda PCX150 Scooter",
             "persons": 2,
             "reservation_half_day": 40,
@@ -28,7 +28,7 @@
             "walk_in_full_day": 55
         },
         {
-            "class": "atv",
+            "class": "ATV",
             "type": "Honda Pioneer ATV",
             "persons": 4,
             "reservation_half_day": 50,
@@ -37,7 +37,7 @@
             "walk_in_full_day": 80
         },
         {
-            "class": "jeep",
+            "class": "JEEP",
             "type": "Jeep Wrangler - 2 door",
             "persons": 4,
             "reservation_half_day": 60,
@@ -46,7 +46,7 @@
             "walk_in_full_day": 90
         },
         {
-            "class": "jeep",
+            "class": "JEEP",
             "type": "Jeep Wrangler - 4 door a/c",
             "persons": 5,
             "reservation_half_day": 70,
