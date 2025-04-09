@@ -57,71 +57,71 @@
         </div>
         <div class="form-container">
             <h2>Rental Agreement Form</h2>
-            <form action="/submit" method="POST">
-              <!-- Rental Details Section -->
-              <fieldset class="rental-details">
-                <legend>Rental Details</legend>
-                <div class="form-grid">
-                  <label for="rental-date">Rental Date:</label>
-                  <input type="date" id="rental-date" name="rental-date" required>
-        
-                  <label for="rental-period">Rental Period (days):</label>
-                  <input type="number" id="rental-period" name="rental-period" min="1" required>
-        
-                  <label for="rental-type">Rental Type:</label>
-                  <select id="rental-type" name="rental-type" required>
-                    <option value="">Select Type</option>
-                    <option value="scooter">Scooter</option>
-                    <option value="atv">ATV</option>
-                    <option value="jeep">Jeep</option>
-                    <option value="other">Other</option>
-                  </select>
-        
-                  <label for="rental-number">Rental Number:</label>
-                  <input type="text" id="rental-number" name="rental-number" required>
+            <form id="rental-form">
+                <!-- Rental Details Section -->
+                <fieldset class="rental-details">
+                    <legend>Rental Details</legend>
+                    <div class="form-grid">
+                        <label for="rental-date">Rental Date:</label>
+                        <input type="date" id="rental-date" name="rental-date" required>
+    
+                        <label for="rental-period">Rental Period:</label>
+                        <select id="rental-period" name="rental-period" required>
+                            <option value="">Select Period</option>
+                            <option value="half-day">1/2 Day</option>
+                            <option value="full-day">Full Day</option>
+                        </select>
+    
+                        <label for="rental-class">Rental Class:</label>
+                        <select id="rental-class" name="rental-class" required>
+                            <option value="">Select Class</option>
+                            <option value="SCOOTER">Scooter</option>
+                            <option value="JEEP">Jeep</option>
+                            <option value="ATV">ATV</option>
+                        </select>
+    
+                        <label for="rental-type">Vehicle Type:</label>
+                        <select id="rental-type" name="rental-type" required disabled>
+                            <option value="">Select Vehicle Type</option>
+                        </select>
+                    </div>
+                    <div class="total-cost">
+                        <label>Total Cost:</label>
+                        <span id="cost-display">$0.00</span>
+                    </div>
+                </fieldset>
+    
+                <!-- Personal Information Section -->
+                <fieldset class="personal-info">
+                    <legend>Personal Information</legend>
+                    <div class="form-grid">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+    
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="123-456-7890" required>
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="you@you.com" required>
+    
+                        <label for="home-state">Home State/Country:</label>
+                        <input type="text" id="home-state" name="home-state" required>
+                    </div>
+                </fieldset>
+    
+                <!-- Special Accommodations -->
+                <fieldset class="special-accommodations">
+                    <legend>Special Accommodations/Comments</legend>
+                    <div class="form-flex">
+                        <label for="special-comments">Needs or Drop-off Request:</label>
+                        <textarea id="special-comments" name="special-comments" rows="4" placeholder="E.g., Need drop-off at airport"></textarea>
+                    </div>
+                </fieldset>
+    
+                <!-- Submit Button -->
+                <div class="submit-container">
+                    <button type="submit">Submit Agreement</button>
                 </div>
-              </fieldset>
-        
-              <!-- Personal Information Section -->
-              <fieldset class="personal-info">
-                <legend>Personal Information</legend>
-                <div class="form-grid">
-                  <label for="name">Full Name:</label>
-                  <input type="text" id="name" name="name" required>
-        
-                  <label for="phone">Phone Number:</label>
-                  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
-        
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required>
-        
-                  <label for="home-state">Home State/Country:</label>
-                  <input type="text" id="home-state" name="home-state" required>
-                </div>
-              </fieldset>
-        
-              <!-- Cruise Line (Conditional) -->
-              <fieldset class="cruise-line" id="cruise-line-section">
-                <legend>Cruise Line (if applicable)</legend>
-                <div class="form-grid">
-                  <label for="cruise-line">Cruise Line:</label>
-                  <input type="text" id="cruise-line" name="cruise-line">
-                </div>
-              </fieldset>
-        
-              <!-- Special Accommodations -->
-              <fieldset class="special-accommodations">
-                <legend>Special Accommodations/Comments</legend>
-                <div class="form-flex">
-                  <label for="special-comments">Needs or Drop-off Request:</label>
-                  <textarea id="special-comments" name="special-comments" rows="4" placeholder="E.g., Need drop-off at airport"></textarea>
-                </div>
-              </fieldset>
-        
-              <!-- Submit Button -->
-              <div class="submit-container">
-                <button type="submit">Submit Agreement</button>
-              </div>
             </form>
           </div>
     </main>

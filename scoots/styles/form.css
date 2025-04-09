@@ -1,13 +1,24 @@
 /* Form container adjustments to fit within CSS1’s layout */
 .form-container {
-  max-width: 860px;
+  max-width: 800px;
   margin: 140px auto 100px; /* Space for fixed header (120px) and footer (~80px) */
   background: white;
   padding: 20px;
+  padding-bottom: 100px; /* Extra padding to push content above footer */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative; /* Ensure it’s in the document flow */
+  position: relative; /* Ensure it’s in the flow */
   z-index: 10; /* Above hero (z-index: 1), below header/footer (z-index: 1000) */
+}
+
+/* Override CSS1’s h1 styles for the form */
+h2 {
+  /* Changed from h1 to h2 to match your HTML */
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Override CSS1’s white color */
+  font-size: 2em; /* Slightly smaller than CSS1’s 2.5em for form context */
+  text-shadow: none; /* Remove CSS1’s shadow */
 }
 
 fieldset {
@@ -39,7 +50,7 @@ label {
 input,
 select,
 textarea {
-  width: 95%;
+  width: 100%;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -61,7 +72,7 @@ textarea {
   resize: vertical;
 }
 
-/* Cruise Line Section (hidden by default) */
+/* Cruise Line Section (kept but irrelevant since removed from HTML) */
 #cruise-line-section {
   display: none;
 }
@@ -87,6 +98,33 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* Total Cost Display */
+.total-cost {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #333;
+}
+
+.total-cost label {
+  font-weight: bold;
+}
+
+#cost-display {
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+/* Ensure select elements match input styling */
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
 /* Responsive Design adjustments to align with CSS1 */
 @media (max-width: 768px) {
   .form-grid {
@@ -95,13 +133,15 @@ button:hover {
 
   .form-container {
     margin: 130px auto 90px; /* Slightly less space for medium screens */
-    padding: 15px; /* Adjust padding */
+    padding: 15px;
+    padding-bottom: 90px; /* Adjust padding for footer */
   }
 }
 
 @media (max-width: 480px) {
   .form-container {
     margin: 120px auto 80px; /* Minimal space for small screens */
-    padding: 10px; /* Tighter padding */
+    padding: 10px;
+    padding-bottom: 80px; /* Adjust padding for footer */
   }
 }
