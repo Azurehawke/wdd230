@@ -57,11 +57,3 @@ document.getElementById('rental-form').addEventListener('submit', (e) => {
   console.log(Object.fromEntries(formData)); // For debugging
   window.location.href = '../scoots/submit.html';
 });
-
-        // Handle form submission and redirect
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-          e.preventDefault();
-          const formData = new FormData(e.target);
-          console.log(Object.fromEntries(formData)); // For debugging
-          window.location.href = '../scoots/submit.html';
-      });
